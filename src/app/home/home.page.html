@@ -1,0 +1,116 @@
+<ion-header [translucent]="true" hidden>
+  <ion-toolbar color="primary">
+    <ion-title> login </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item lines="none" class="ion-text-center">
+    <ion-label>
+      <ion-icon name="person-outline" class="logo" color="black"></ion-icon>
+    </ion-label>
+  </ion-item>
+
+  <div class="ion-padding">
+    <form #form="ngForm" method="post">
+      <div style="margin-top: 8%;">
+        <ion-item>
+          <ion-label position="floating">
+            <ion-icon slot="start" name="mail" color="primary"></ion-icon>
+            &nbsp; Email
+          </ion-label>
+          <ion-input
+            ngModel
+            type="email"
+            name="email"
+            #email="ngModel"
+            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            required
+          ></ion-input>
+        </ion-item>
+        <div
+          *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="ion-text-center"
+          style="color: red;"
+        >
+          <div *ngIf="email.errors.required">
+            Email-id is required.
+          </div>
+          <div *ngIf="email.errors.pattern">
+            Please enter valid email address
+          </div>
+        </div>
+
+        <ion-item>
+          <ion-label position="floating">
+            <ion-icon
+              slot="start"
+              name="lock-closed"
+              color="primary"
+            ></ion-icon>
+            &nbsp; Password
+          </ion-label>
+          <ion-input
+            ngModel
+            type="password"
+            name="password"
+            minlength="6"
+            #pass="ngModel"
+            required
+          ></ion-input>
+        </ion-item>
+        <div
+          *ngIf="pass.invalid && (pass.dirty || pass.touched)"
+          class="ion-text-center"
+          style="color: red;"
+        >
+          <div *ngIf="pass.errors.required">
+            Password is required.
+          </div>
+          <div *ngIf="pass.errors.minlength">
+            Password must be at least 6 characters long.
+          </div>
+        </div>
+      </div>
+
+      <ion-row>
+        <ion-col>
+          <ion-button
+            (click)="register()"
+            expand="block"
+            fill="clear"
+            color="primary"
+          >
+            <ion-label class="ion-text-wrap">Forgot Password?</ion-label>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button
+          class="ion-no-margin ion-no-padding"
+          [routerLink]="['/','demo2']"
+          routerLinkActive="router-link-active"
+          fill="clear"
+          expand="block"
+          color="dark"
+        >
+          Don't have an account? Sign up
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button
+    class="ion-no-margin ion-no-padding"
+    style="height: 60px;"
+    expand="full"
+    color="primary"
+    [disabled]="!form.valid">Sign In</ion-button>
+</ion-footer>

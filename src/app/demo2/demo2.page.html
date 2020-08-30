@@ -1,0 +1,96 @@
+
+<ion-header>
+  <ion-toolbar color="primary" >
+    <ion-title>sign up</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-grid class="ion-text-center">
+    <ion-row>
+      <ion-col size="12">
+  <ion-icon style="  font-size: 20vh;"   name="person-add-outline" ></ion-icon>
+      </ion-col>
+      </ion-row>
+  </ion-grid>
+   
+  <div class="ion-padding">
+
+    
+      <form #form="ngForm" (ngSubmit)="onLogin(form)" method="post">
+
+       
+      <div style="margin-top: 8%;">
+        <ion-item>
+          <ion-label position="floating">
+            <ion-icon slot="start" name="person" color="primary"></ion-icon> &nbsp;
+            Full-Name
+          </ion-label>
+          <ion-input ngModel type="text" name="name" #name="ngModel"  required></ion-input>
+        </ion-item>
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="ion-text-center" style="color: red;">
+          <div *ngIf="name.errors.required">
+            Full-Name is required.
+          </div>                                                                                                                        
+        </div>
+
+
+
+        <ion-item>
+          <ion-label position="floating">
+            <ion-icon slot="start" name="mail" color="primary"></ion-icon> &nbsp;
+            Email
+          </ion-label>
+          <ion-input ngModel type="email" name="email" #email="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required></ion-input>
+        </ion-item>
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="ion-text-center" style="color: red;">
+          <div *ngIf="email.errors.required">
+            Email-id is required.
+          </div>
+          <div *ngIf="email.errors.pattern">
+            Please enter valid email address
+          </div>
+        </div>
+  
+        <ion-item>
+          <ion-label position="floating">
+            <ion-icon slot="start" name="lock-closed" color="primary"></ion-icon> &nbsp;
+            Password
+          </ion-label>
+          <ion-input ngModel type="password" name="password" minlength="6" #pass="ngModel" required></ion-input>
+        </ion-item>
+        <div *ngIf="pass.invalid && (pass.dirty || pass.touched)" class="ion-text-center" style="color: red;">
+  
+          <div *ngIf="pass.errors.required">
+            Password is required.
+          </div>
+          <div *ngIf="pass.errors.minlength">
+            Password must be at least 6 characters long.
+          </div>
+          </div>
+
+      </div>
+       
+      </form>
+    </div>
+</ion-content>
+
+  <ion-footer class="ion-no-border" >
+ 
+    <ion-grid >
+      <ion-row>
+        <ion-col size="12">
+          <ion-button class="ion-no-margin ion-no-padding" [routerLink]="['/','home']" routerLinkActive="router-link-active"  fill="clear"   expand="block"  color="dark" >
+            Already have an account? Sign in </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    <ion-button hidden class="ion-no-margin ion-no-padding" [routerLink]="['/','demo2','date']" routerLinkActive="router-link-active"   style="height: 60px;" expand="full"   color="primary" >date</ion-button>
+
+     
+      <ion-button class="ion-no-margin ion-no-padding" [routerLink]="['/','societyjc']" routerLinkActive="router-link-active"   style="height: 60px;" expand="full"   color="primary" >Sign Up</ion-button>
+  </ion-footer>

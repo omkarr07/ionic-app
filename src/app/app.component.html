@@ -1,0 +1,18 @@
+<ion-app>
+  <ion-menu contentId="menu-content" menuId="menu-content"  type="overlay">
+    <ion-content>
+      <ion-list id="inbox-list">
+        <ion-list-header>Maintenance App</ion-list-header>
+        <ion-note>omsaidham@gmail.com</ion-note>
+
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+        
+        </ion-menu-toggle>
+      </ion-list>
+
+     
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="menu-content"></ion-router-outlet>
+</ion-app>
+

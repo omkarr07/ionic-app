@@ -1,0 +1,94 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar  color="primary" >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="societyjc"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Society Create Form</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-margin"> 
+      <form >       
+        <ion-item>
+          <ion-label position="floating"><ion-icon name="business-outline"></ion-icon> &nbsp; Society Name <ion-text color="danger">*</ion-text> </ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+<br>
+        <ion-item>
+            <ion-label  position="floating">Number of wing's <ion-text color="danger">*</ion-text></ion-label>
+                <ion-input type="number" ></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+            <ion-label  position="floating">Number of Floor's <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input type="number" ></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+            <ion-label position="floating">Total Number of Room's</ion-label>
+            <ion-input type="number"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+            <ion-label position="floating">Address <ion-text color="danger">*</ion-text></ion-label>
+            <ion-textarea ></ion-textarea>
+        </ion-item>
+
+          <ion-grid  >
+            <ion-row>
+              <ion-col size="5" style="margin-top: 10px;">
+                
+                <ion-label >State <ion-text color="danger">*</ion-text></ion-label>
+              </ion-col>
+
+              <ion-col size="7">
+                <ion-select value="0" interface="action-sheet" class="custom-options">
+                  <ion-select-option value="0"></ion-select-option>
+                  <ion-select-option value="1">Andhra Pradesh</ion-select-option>
+                  <ion-select-option value="2">Arunachal Pradesh</ion-select-option>
+                  <ion-select-option value="3">Assam</ion-select-option>
+                  <ion-select-option value="4">Bihar</ion-select-option>
+                  <ion-select-option value="5">Chhattisgarh</ion-select-option>
+                  <ion-select-option value="6">Goa</ion-select-option>
+                  <ion-select-option value="7">Gujarat</ion-select-option>
+                  <ion-select-option value="8">Haryana</ion-select-option>
+                  <ion-select-option value="9">Himachal Pradesh</ion-select-option>
+                  <ion-select-option value="10">Jharkhand</ion-select-option>
+                  <ion-select-option value="11">Karnataka</ion-select-option>
+                  <ion-select-option value="12">Kerala</ion-select-option>
+                  <ion-select-option value="13">Madhya Pradesh</ion-select-option>
+                  <ion-select-option value="14">Maharashtra</ion-select-option>
+                  <ion-select-option value="15">Manipur</ion-select-option>
+                  <ion-select-option value="16">Meghalaya</ion-select-option>
+                  <ion-select-option value="17">Mizoram</ion-select-option>
+                  <ion-select-option value="18">Nagaland</ion-select-option>
+                  <ion-select-option value="19">Odisha</ion-select-option>
+                  <ion-select-option value="20">Punjab</ion-select-option>
+                  <ion-select-option value="21">Rajasthan</ion-select-option>
+                  <ion-select-option value="22">Sikkim</ion-select-option>
+                  <ion-select-option value="23">Tamil Nadu</ion-select-option>
+                  <ion-select-option value="24">Telangana</ion-select-option>
+                  <ion-select-option value="25">Tripura</ion-select-option>
+                  <ion-select-option value="26">Uttar Pradesh</ion-select-option>
+                  <ion-select-option value="27">Uttarakhand </ion-select-option>
+                  <ion-select-option value="28">West Bengal</ion-select-option>
+          </ion-select>
+
+            </ion-col>
+            </ion-row>          
+              
+          </ion-grid>  
+     
+  </form>
+       
+    
+</ion-content>
+
+<ion-footer class="ion-no-margin ion-no-padding">
+    <ion-button  class="ion-no-margin ion-no-padding" style="height: 60px;" expand="full"  [routerLink]="['/','dashboard']" routerLinkActive="router-link-active"   color="primary">Create society</ion-button>
+</ion-footer>
+
+
+
+
+
+

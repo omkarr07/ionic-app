@@ -1,0 +1,125 @@
+<ion-header hidden>
+  <ion-toolbar>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list style="height: 220px; background-color: #004d99
+  ;">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="9" mode="md" class="ion-padding" >
+          
+            <ion-label style="font-size: 25px;" color="light">Admin Name</ion-label>
+            <br>
+          <ion-label color="medium">Society name</ion-label> 
+        </ion-col>
+
+        <ion-col size="3" mode="md" class="ion-padding">
+          <div>
+            <ion-avatar>
+              <img src="../../assets/hhh.jpg" />
+            </ion-avatar>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" >
+          <ion-card (click)="bill()"   class="ion-padding" style="margin-top: -105px;" >
+            <img class="ion-padding"  src="../../assets/document.png" />
+            <ion-text color="primary " class="ion-text-center " >
+              <b><p style="font-size: 14px;" >Generate Maintenance</p></b>
+            </ion-text>
+          </ion-card>
+        </ion-col>
+
+
+
+
+        
+  
+        <ion-col size="6">
+          <ion-card (click)="si()" style="margin-top: -105px;" class="ion-padding">
+            <img class="ion-padding" src="../../assets/building.png" />
+            <ion-text color="primary " class="ion-text-center">
+              <b><p style="font-size: 14px;" >Society Information</p></b>
+                  </ion-text>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-card (click)="vm()"  class="ion-padding" >
+            <img class="ion-padding" src="../../assets/ff.png" />
+            <ion-text color="primary"   class="ion-text-center">
+             <b><p style="font-size: 15px;" >View Members</p></b> 
+            </ion-text>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6">
+          <ion-card (click)="pnoc()" class="ion-padding">
+            <img class="ion-padding" src="../../assets/document (1).png" />
+            <ion-text color="primary " class="ion-text-center">
+              <b><p style="font-size: 15px;">Post Notices</p></b>
+            </ion-text>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-card class="ion-padding ">
+            <img class="ion-padding" src="../../assets/register.png" />
+            <ion-text color="primary " class="ion-text-center">
+              <b><p style="font-size: 15px;">View Complaints</p></b>
+            </ion-text>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6">
+          <ion-card class="ion-padding" >
+            <img class="ion-padding" src="../../assets/staff.png" />
+            <ion-text color="primary " class="ion-text-center">
+              <b><p style="font-size: 15px;">Staff Information</p></b>
+            </ion-text>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-card class="ion-padding">
+            <img class="ion-padding" src="../../assets/question.png" />
+            <ion-text color="primary " class="ion-text-center">
+              <b><p style="font-size: 15px;">FAQ</p></b>
+            </ion-text>
+          </ion-card>
+        </ion-col>
+        
+        <ion-col size="6">
+          <ion-card class="ion-padding">
+            <img class="ion-padding" src="../../assets/3119267.png" />
+            <ion-text color="primary " class="ion-text-center">
+              <b><p style="font-size: 15px;">emergency</p></b>
+            </ion-text>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+  </div>
+  
+</ion-content>

@@ -1,0 +1,127 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="dashboard"></ion-back-button>
+    </ion-buttons>
+   
+    <ion-title>Create Bill</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-card>
+    <h6 class="ion-padding" color="dark">Bill Details</h6>
+    <form action="" class="ion-padding">
+      <div class="form-group">
+        <label for="">Name</label>
+        <input type="text" name="" id="" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Notes (Optional)</label>
+        <textarea name="" id="" cols="10" rows="3" class="form-control"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="">Blance-Sheet</label>
+          <ion-select value="0" interface="popover" style="border: 1px solid rgb(204, 204, 204); border-radius: 5px;">
+            <ion-select-option value="0">-- Choose --</ion-select-option>
+            <ion-select-option value="1">Select</ion-select-option>
+            <ion-select-option value="2">Main Balance</ion-select-option>
+          </ion-select>
+      </div>
+    </form>
+  </ion-card> -->
+  <ion-card>
+    <h4 class="ion-padding" style="color: black;">Bill Duration</h4>
+    <form action="">
+      <div class="form-group">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12">
+              <ion-label>INVOICE DATE</ion-label>
+              <ion-item (click)="datesm()">
+                <ion-label  > {{mydatem}}    
+                </ion-label>
+                <ion-icon name="calendar-sharp"></ion-icon>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+              
+                <ion-label>FROM</ion-label>
+                 <ion-item (click)="dates()">
+                   <ion-label >{{mydate}}</ion-label>
+                   
+                   <ion-icon name="calendar-outline"></ion-icon>
+                 </ion-item>
+            </ion-col>
+            <ion-col size="6">
+              <ion-label>TO</ion-label>
+                 <ion-item (click)="dateo()">
+                   <ion-label>{{myDate}}</ion-label>
+                   <ion-icon   name="calendar-outline"></ion-icon>
+                 </ion-item>
+            </ion-col>  
+          </ion-row>
+        </ion-grid>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12">
+              <label for="">Due Date</label>
+              <ion-item (click)="ddate()">
+                <ion-label>{{dd}}</ion-label>
+                <ion-icon name="calendar-sharp"></ion-icon>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </form>
+  </ion-card>
+  <ion-card>
+    <ion-button fill="clear" expand="block" [routerLink]="['/service-list']" routerLinkActive="router-link-active" >
+      <ion-icon name="add-circle-outline"></ion-icon>
+      &nbsp; Add Bill Item</ion-button>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <p style="color: black"><b>Name : Water charges</b></p>
+      <p>Owner Amount : </p>
+      <p>Rent Amount : </p>
+      <p>Closed Amount : </p><br>
+      <ion-label color="danger"> * Notice: Water reading add option come after you generate bill.* </ion-label>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label>Enable Penalty</ion-label>
+      <ion-toggle slot="end" name="penalty" [(ngModel)]="penalty" color="primary" ></ion-toggle>
+    </ion-item>  
+      <div *ngIf="penalty">
+        <form action="" class="ion-padding">
+          <div class="form-group">
+            <label for="">Select Occurance</label>
+              <ion-select value="0" interface="popover" style="border: 1px solid ;">
+                <ion-select-option value="0">-- Choose --</ion-select-option>
+                <ion-select-option value="1">One Time</ion-select-option>
+                <ion-select-option value="2">Recurring</ion-select-option>
+              </ion-select>
+          </div>
+          <div class="form-group">
+            <label for="">Penalty rate</label>
+              <ion-input type="number" style="border: 1px solid ;" placeholder="Enter penalty rate"></ion-input>
+          </div>
+        </form>
+      </div>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+           
+            <ion-button expand="block">Save</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-card>
+</ion-content>

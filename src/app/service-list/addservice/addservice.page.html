@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/service-list"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Bill Item</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <form action="" class="ion-padding">
+      <div class="form-group">
+        <label for="">Item Name</label>
+        <input type="text" name="" id="" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Notes ( Optional )</label>
+        <textarea name="" id="" cols="15" rows="3" class="form-control"></textarea>
+      </div>
+    </form>
+  </ion-card>
+  <ion-card>
+    <form action="" class="ion-padding">
+      <div class="form-group">
+        <label for="">Type</label>
+        <ion-select interface="popover" value="0" style="border: 1px solid rgb(204, 204, 204); border-radius: 5px;">
+          <ion-select-option value="0">Select</ion-select-option>
+          <ion-select-option value="1">Fixed Price</ion-select-option>
+          <ion-select-option value="2">Based on Unit</ion-select-option>
+          <ion-select-option value="2">Based on sq Feet</ion-select-option>
+        </ion-select>
+        
+      </div>
+    </form>
+  </ion-card>
+</ion-content>
+<ion-footer >
+  <ion-button class="ion-no-padding ion-no-margin" expand="block" [routerLink]="['/service-list']" routerLinkActive="router-link-active" >Save</ion-button>  
+</ion-footer>
+

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/service-list"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Update Bill Item</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <form action="" class="ion-padding">
+      <div class="form-group">
+        <label for="">Item name</label>
+        <input type="text" name="" id="" value="Parking Charges" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Notes ( Optional )</label>
+        <textarea name="" id="" cols="15" rows="3" class="form-control"></textarea>
+      </div>
+    </form>
+  </ion-card>
+  <ion-card>
+    <form action="" class="ion-padding">
+      <div class="form-group">
+        <label for="">For owner ( self occupied )</label>
+        <input type="number" name="" id="" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">For rent</label>
+        <input type="number" name="" id="" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">For closed unit</label>
+        <input type="number" name="" id="" class="form-control">
+      </div>
+    </form>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-button expand="block" [routerLink]="['/service-list']" routerLinkActive="router-link-active" >Save</ion-button>
+</ion-footer>

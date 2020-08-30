@@ -1,0 +1,85 @@
+ <ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>invoice</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <form action="" class="ion-padding">
+      <div class="form-group">
+        <label for="">Name : </label>
+        <input type="text" name="" id="" class="form-control">
+      </div>
+     <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="">Wing Number : </label>
+        <input type="number" name="" id="" class="form-control">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="">Room Number : </label>
+        <input type="number" name="" id="" class="form-control">
+      </div>
+     </div>
+     <div class="form-group">
+       <label for="">Bill Month : </label>
+       <input type="date" name="" id="" class="form-control">
+     </div>
+    </form>
+  </ion-card>
+  <ion-card>
+    <form action="" class="ion-padding">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="">Bill Date : </label>
+          <input type="date" name="" id="" class="form-control">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">Bill Due Date : </label>
+          <input type="date" name="" id="" class="form-control">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="">Bill Amount : </label>
+          <input type="number" name="" id="" class="form-control">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">Bill Amount After Due Date : </label>
+          <input type="date" name="" id="" class="form-control">
+        </div>
+      </div>
+    </form>
+  </ion-card>
+  <ion-card>
+    <ion-item (click)="onButtonClick()" >
+      <ion-label>Summary</ion-label>
+      <ion-icon slot="end" [name]="buttonClicked ? 'chevron-down-outline' : 'chevron-up-outline'"></ion-icon>
+      <!-- <ion-toggle slot="end" (click)="hide()"></ion-toggle> -->
+ </ion-item>
+    <div *ngIf="buttonClicked" class="ion-padding">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Sr No.</th>
+            <th>Service's</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1.</td>
+            <td>Water Service</td>
+            <td>500/-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-button expand="block" [routerLink]="['/']" routerLinkActive="router-link-active" >Pay Bill</ion-button>
+</ion-footer> 

@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="dashboard/memberdashboard"
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Complaints</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #form="ngForm">
+    <ion-card class="ion-padding">
+      <h4 class="ion-text-wrap">Generate a Complaint</h4>
+      <br />
+
+      <!-- <div >
+        <ion-label>select category</ion-label>
+          
+          <ion-select style="border: 1px solid black;" [(ngModel)]="selectedItems" value="0" name="selectedItems" slot="end" interface="popover"  > 
+            <ion-select-option *ngFor="let item of items" >{{item.title}}</ion-select-option>
+          </ion-select>
+      </div> -->
+
+      <div>
+          <ion-select  name="selectedItems"  value="0"  style="border-bottom: 1px solid black;">
+            <ion-select-option value="0">select category</ion-select-option>
+            <ion-select-option value="1">dcdvd</ion-select-option>
+            <ion-select-option value="2">fvff</ion-select-option>
+          </ion-select>
+      </div>
+      
+       
+
+      <br />
+      <div>
+        <p class="ion-no-margin" style="font-size: 16px; color: black;">
+          Brief Message
+        </p>
+        <ion-textarea
+          class="ion-no-margin"
+          style="border: 1px solid black;" [(ngModel)]="message" name="message"
+        ></ion-textarea>
+      </div>
+      <br />
+
+      <ion-grid class="ion-no-margin">
+        <ion-row>
+          <ion-col size="7">
+            <ion-button color="primary" expand="block">Submit</ion-button>
+          </ion-col>
+          <ion-col size="5">
+            <ion-button type="button" color="danger" (click)="reset(form)" expand="block"
+              >Reset</ion-button
+            >
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </form>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>Complaints History</ion-label>
+      <ion-select value="" interface="action-sheet">
+        <ion-select-option value="1"></ion-select-option>
+        <ion-select-option value=""></ion-select-option>
+        <ion-select-option value=""></ion-select-option>
+        <ion-select-option value=""></ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+
+
+

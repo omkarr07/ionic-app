@@ -1,0 +1,33 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="societyjc"></ion-back-button>
+    </ion-buttons>
+    <ion-title  >Join Society </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+<ion-list style=" margin-top: 50%;">
+  <ion-label >
+    <ion-text color="primary">
+      <h1>GET JOINING CODE FROM SOCIETY ADMIN.....</h1>
+    </ion-text>
+ </ion-label>
+
+<ion-item  style="border: 1px solid blue;">
+ <ion-label color="primary" >Enter Code<ion-text color="danger"> -</ion-text></ion-label>
+ <ion-input required></ion-input>
+</ion-item>
+ <br>
+<ion-button (click)="onsubmit()" expand="block" >
+  submit
+</ion-button>
+
+</ion-list>
+  
+
+
+
+</ion-content>

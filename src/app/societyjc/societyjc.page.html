@@ -1,0 +1,38 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title >SELECT</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card style=" height:'94%';">
+    <ion-card-content style="margin-top: 20%;"> 
+    <ion-button [routerLink]="['/','societyjc','societyc']" routerLinkActive="router-link-active"  expand="block" style="margin-top: 30px;" >
+      Create Society
+    </ion-button>
+   
+
+<div class="ion-text-center" style="margin-top: 30px;">
+  <ion-label position="floating" class="ion-text-center"> OR</ion-label>
+</div>
+
+  <div style="border: 1px solid; margin-top: 30px;" class="ion-margin">
+  <ion-card-header>
+    <ion-card-subtitle class="ion-text-center">Join Society through code, which should be issued by Admin</ion-card-subtitle>
+  </ion-card-header>
+  <center>
+    <ion-button class="ion-margin" [routerLink]="['/','societyjc','societyj']" routerLinkActive="router-link-active" >
+      Join Society
+    </ion-button>
+  </center>
+  
+</div>
+  
+    </ion-card-content>
+</ion-card>
+  
+</ion-content>
