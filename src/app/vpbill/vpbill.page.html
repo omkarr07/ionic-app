@@ -16,7 +16,7 @@
             <ion-label>Name : </ion-label>
           </ion-col>
           <ion-col>
-            <ion-input type="text" placeholder=""></ion-input>
+            <ion-label>value</ion-label>
           </ion-col>
         </ion-item>
       </ion-row>
@@ -26,7 +26,8 @@
             <ion-label>Wing No : </ion-label>
           </ion-col>
           <ion-col >
-            <ion-input type="number" placeholder=""></ion-input>
+            <ion-label>value</ion-label>
+
           </ion-col>
         </ion-item>
       </ion-row>
@@ -36,67 +37,13 @@
             <ion-label>Room No : </ion-label>
           </ion-col>
           <ion-col >
-            <ion-input type="number" placeholder=""></ion-input>
+            <ion-label>value</ion-label>
           </ion-col>
         </ion-item>
       </ion-row>
     </ion-grid>
   </ion-card>
-  <ion-card>
-    <ion-grid fixed>
-      <ion-row>
-        <ion-item lines="none">
-          <ion-col>
-            <ion-label>Bill Month : </ion-label>
-          </ion-col>
-          <ion-col>
-            <ion-input type="text" placeholder=""></ion-input>
-          </ion-col>
-        </ion-item>
-      </ion-row>
-      <ion-row>
-        <ion-item lines="none">
-          <ion-col>
-            <ion-label>Bill Date : </ion-label>
-          </ion-col>
-          <ion-col>
-            <ion-input type="text" placeholder=""></ion-input>
-          </ion-col>
-        </ion-item>
-      </ion-row>
-      <ion-row>
-        <ion-item lines="none">
-          <ion-col>
-            <ion-label>Bill Amount : </ion-label>
-          </ion-col>
-          <ion-col>
-            <ion-input type="number" placeholder=""></ion-input>
-          </ion-col>
-        </ion-item>
-      </ion-row>
-      <hr>
-      <ion-row>
-        <ion-item lines="none">
-          <ion-col>
-            <ion-label>Bill Due Date : </ion-label>
-          </ion-col>
-          <ion-col>
-            <ion-input type="number" placeholder=""></ion-input>
-          </ion-col>
-        </ion-item>
-      </ion-row>
-      <ion-row>
-        <ion-item lines="none">
-          <ion-col>
-            <ion-label>Bill Amount After Due Date : </ion-label>
-          </ion-col>
-          <ion-col>
-            <ion-input type="text" placeholder=""></ion-input>
-          </ion-col>
-        </ion-item>
-      </ion-row>
-    </ion-grid>
-  </ion-card>
+
   <ion-card>
     <ion-item (click)="onButtonClick()" >
       <ion-label>Bill Details</ion-label>
@@ -134,6 +81,67 @@
       </table>
     </div>
   </ion-card>
+
+
+
+  <ion-card>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-item lines="none">
+          <ion-col>
+            <ion-label>Bill Month : </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>value</ion-label>
+          </ion-col>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item lines="none">
+          <ion-col>
+            <ion-label>Bill Date : </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>value</ion-label>
+          </ion-col>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item lines="none">
+          <ion-col>
+            <ion-label>Bill Amount : </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>value</ion-label>
+          </ion-col>
+        </ion-item>
+      </ion-row>
+      <hr>
+
+      <ion-row>
+        <ion-item lines="none">
+          <ion-col>
+            <ion-label>Bill Due Date : </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>value</ion-label>
+          </ion-col>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item lines="none">
+          <ion-col>
+            <ion-label>Bill Amount After Due Date : </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>value</ion-label>
+          </ion-col>
+        </ion-item>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  
 </ion-content>
 <ion-footer>
   <ion-button expand="block" [routerLink]="['/']" routerLinkActive="router-link-active" >Pay Bill</ion-button>
