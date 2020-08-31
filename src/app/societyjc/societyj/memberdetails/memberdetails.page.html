@@ -35,7 +35,96 @@
         <ion-label position="floating">Room No <ion-text color="danger">*</ion-text></ion-label>
         <ion-input type="number"></ion-input>
     </ion-item>
+
+
+
+
     <ion-item>
+      <ion-label>DO YOU HAVE ANY VECHICLES ?</ion-label>
+      <ion-toggle slot="end" name="penalty" [(ngModel)]="penalty" color="primary" ></ion-toggle>
+    </ion-item>  
+      <div *ngIf="penalty">
+      <form [formGroup]="productForm" >
+      <ion-grid class="ion-no-padding">
+        <ion-row formArrayName="quantities">
+          <ion-col >
+          <ion-item>
+            <ion-label>Vechicle Section</ion-label>
+            <ion-button (click)="addQuantity()" >add vechicle</ion-button>
+          </ion-item>
+          </ion-col>
+        </ion-row>
+         
+        <ion-row  *ngFor="let quantity of quantities().controls" >
+          <ion-col size="7">
+              <ion-select class="ion-margin"  interface="popover"  value="0"   >
+                <ion-select-option value="0">select category</ion-select-option>
+                <ion-select-option value="1">TWO WHEELER</ion-select-option>
+                <ion-select-option value="2">THREE WHEELER</ion-select-option>
+                <ion-select-option value="3">FOUR WHEELER</ion-select-option>
+              </ion-select>        
+          </ion-col>
+
+          <ion-col  size="5">
+            <ion-item>
+              <ion-label position="floating"  >Vechicle-no </ion-label>
+            <ion-input type="text" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-button  (click)="removeQuantity(i)" > remove </ion-button>
+            </ion-item>
+            
+            
+
+          </ion-col>
+          
+          
+    
+        </ion-row>
+      </ion-grid> 
+    </form></div>
+  
+
+
+ <!-- <div class="container">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    
+    <p>
+      <label for="name">Product Name:</label>
+      <input type="text" id="name" name="name" formControlName="name" class="form-control">
+    </p>
+  
+    <table class="table table-bordered" formArrayName="quantities">
+      <tr>
+        <th colspan="2">Add Multiple Quantity:</th>
+        <th width="150px"><button type="button" (click)="addQuantity()" class="btn btn-primary">Add More</button></th>
+      </tr>
+      <tr *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i">
+        <td>
+            Quantity :
+            <input type="text" formControlName="qty" class="form-control">
+        </td>
+        <td>
+            Price:
+            <input type="text" formControlName="price" class="form-control">
+        </td>
+        <td>
+            <button (click)="removeQuantity(i)" class="btn btn-danger">Remove</button>
+        </td>
+      </tr>
+    </table>
+   
+    <button type="submit" class="btn btn-success">Submit</button>
+    
+  </form>
+    
+  <br/>
+  {{this.productForm.value | json}}
+</div> -->
+
+
+
+  <ion-item>
         <ion-label position="floating" >Address <ion-text color="danger">*</ion-text></ion-label>
         <ion-textarea disabled></ion-textarea>
     </ion-item><br>
