@@ -24,4 +24,8 @@ export class MemberdashboardPage implements OnInit {
     this.route.navigateByUrl("/complaints");
   }
 
+  vpbill(){
+    this.route.navigateByUrl("/vpbill");
+  }
+
 }
